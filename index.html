@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Frontend Mentor | News homepage</title>
   </head>
   <body>
@@ -53,34 +59,44 @@
           <img src="./images/image-web-3-mobile.jpg" alt="" />
         </picture>
 
-        <h2>The Bright Future of Web 3.0?</h2>
+        <div class="article-min-content">
+          <h2 class="main-article-heading">The Bright Future of Web 3.0?</h2>
 
-        <p>
-          We dive into the next evolution of the web that claims to put the
-          power of the platforms back into the hands of the people. But is it
-          really fulfilling its promise?
-        </p>
+          <p class="main-article-paragraph">
+            We dive into the next evolution of the web that claims to put the
+            power of the platforms back into the hands of the people. But is it
+            really fulfilling its promise?
+          </p>
 
-        <a href="/"> Read more</a>
+          <div><a href="/" class="readmore-btn"> Read more</a></div>
+        </div>
       </article>
 
-      <section>
-        <h2 aria-label="New Articles">New</h2>
+      <section class="new-articles-container">
+        <h2 aria-label="New Articles" class="news-heading">New</h2>
         <ul>
-          <li>
-            <h3><a href="/"> Hydrogen VS Electric Cars</a></h3>
-            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+          <li class="new-articles-list">
+            <h3 class="new-articles-heading">
+              <a href="/"> Hydrogen VS Electric Cars</a>
+            </h3>
+            <p class="new-articles-paragraph">
+              Will hydrogen-fueled cars ever catch up to EVs?
+            </p>
           </li>
-          <li>
-            <h3><a href="/"> The Downsides of AI Artistry</a></h3>
-            <p>
+          <li class="new-articles-list">
+            <h3 class="new-articles-heading">
+              <a href="/"> The Downsides of AI Artistry</a>
+            </h3>
+            <p class="new-articles-paragraph">
               What are the possible adverse effects of on-demand AI image
               generation?
             </p>
           </li>
-          <li>
-            <h3><a href="/"> Is VC Funding Drying Up?</a></h3>
-            <p>
+          <li class="new-articles-list">
+            <h3 class="new-articles-heading">
+              <a href="/"> Is VC Funding Drying Up?</a>
+            </h3>
+            <p class="new-articles-paragraph">
               Private funding by VC firms is down 50% YOY. We take a look at
               what that means.
             </p>
@@ -88,28 +104,41 @@
         </ul>
       </section>
 
-      <section aria-label="More Articles">
+      <section aria-label="More Articles" class="more-articles-container">
         <ul>
-          <li>
-            <img src="./images/image-retro-pcs.jpg" alt="" />
-            <p>01</p>
-            <p>Reviving Retro PCs</p>
-            <p>What happens when old PCs are given modern upgrades?</p>
+          <li class="more-articles-list">
+            <div>
+              <img src="./images/image-retro-pcs.jpg" alt="" />
+            </div>
+            <div>
+              <p class="more-articles-number">01</p>
+              <h3 class="more-articles-heading">Reviving Retro PCs</h3>
+              <p>What happens when old PCs are given modern upgrades?</p>
+            </div>
           </li>
-          <li>
-            <img src="./images/image-top-laptops.jpg" alt="" />
-            <p>02</p>
-            <p>Top 10 Laptops of 2022</p>
-            <p>Our best picks for various needs and budgets.</p>
+          <li class="more-articles-list">
+            <div>
+              <img src="./images/image-top-laptops.jpg" alt="" />
+            </div>
+            <div>
+              <p class="more-articles-number">02</p>
+              <h3 class="more-articles-heading">Top 10 Laptops of 2022</h3>
+              <p>Our best picks for various needs and budgets.</p>
+            </div>
           </li>
-          <li>
-            <p>03</p>
-            <img src="./images/image-gaming-growth.jpg" alt="" />
-            <p>The Growth of Gaming</p>
-            <p>How the pandemic has sparked fresh opportunities.</p>
+          <li class="more-articles-list">
+            <div>
+              <img src="./images/image-gaming-growth.jpg" alt="" />
+            </div>
+            <div>
+              <p class="more-articles-number">03</p>
+              <h3 class="more-articles-heading">The Growth of Gaming</h3>
+              <p>How the pandemic has sparked fresh opportunities.</p>
+            </div>
           </li>
         </ul>
       </section>
     </main>
+    <script src="./js/index.js"></script>
   </body>
 </html>
