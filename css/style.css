@@ -110,7 +110,7 @@ select {
 /* IMAGES */
 /* ********************** */
 
-img {
+picture img {
   width: 100%;
 }
 
@@ -225,20 +225,45 @@ header {
 /* ********************** */
 
 main {
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 20px;
+  display: grid;
+  grid-template-areas:
+    "main-article"
+    "new-articles"
+    "more-articles";
+
+  gap: 20px;
 }
 
 article {
   display: grid;
-  padding: 20px;
+  grid-area: main-article;
+}
+
+.main-article-content {
+  display: flex;
+}
+
+.main-article-content > * {
+  flex-basis: 50%;
+}
+
+.main-article-column-two {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .main-article-heading {
-  font-size: 40px;
+  font-size: 70px;
+  line-height: 1.2;
 }
 
 .main-article-paragraph {
-  font-size: 20px;
+  font-size: 24px;
   color: var(--Dark-Grayish-Blue);
 }
 
@@ -255,6 +280,8 @@ article {
   color: var(--New-Articles-Heading);
   background: var(--New-Articles-Background);
   padding: 20px;
+
+  grid-area: new-articles;
 }
 
 .new-articles-list {
@@ -278,6 +305,14 @@ article {
 /* MORE ARTICLES */
 /* ********************** */
 
+.more-articles-section {
+  grid-area: more-articles;
+}
+
+.more-articles-container {
+  display: flex;
+}
+
 .more-articles-list {
   display: flex;
   justify-content: space-between;
@@ -285,8 +320,52 @@ article {
   padding: 20px;
 }
 
+.more-articles-list img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .more-articles-number {
   font-size: 30px;
   font-weight: 700;
   color: var(--Number-Color);
+}
+
+/* ********************** */
+/* MEDIA QUERIES */
+/* ********************** */
+
+@media (min-width: 1000px) {
+  [aria-controls="nav-menu"] {
+    display: none;
+  }
+
+  [aria-expanded="false"] ~ ul {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  [aria-expanded="true"] ~ ul {
+    font-size: 18px;
+    text-transform: capitalize;
+
+    flex-direction: row;
+
+    position: initial;
+
+    background: transparent;
+
+    text-align: start;
+
+    padding: 0px 0px 0px 0px;
+  }
+
+  main {
+    grid-template-columns: 70% 30%;
+    grid-template-areas:
+      "main-article new-articles"
+      "more-articles more-articles";
+  }
 }
