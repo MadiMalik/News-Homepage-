@@ -1,60 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | News homepage</title>
+    <title>Frontend Mentor | News homepage</title>
+  </head>
+  <body>
+    <header>
+      <img class="header-logo" src="./images/logo.svg" alt="News" />
+      <nav class="navbar" id="navbar" aria-label="main">
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="menu"
+        >
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+        <ul class="nav-menu" id="nav-menu" role="list">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/">New</a>
+          </li>
+          <li>
+            <a href="/">Popular</a>
+          </li>
+          <li>
+            <a href="">Trending</a>
+          </li>
+          <li>
+            <a href="">Categories</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="visually-hidden">W News Home Page</h1>
 
-  Home
-  New
-  Popular
-  Trending
-  Categories
+      <article>
+        <picture>
+          <source
+            media="(min-width: )"
+            srcset="./images/image-web-3-desktop.jpg"
+          />
+          <img src="./images/image-web-3-mobile.jpg" alt="" />
+        </picture>
 
-  The Bright Future of Web 3.0?
+        <h2>The Bright Future of Web 3.0?</h2>
 
-  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-  But is it really fulfilling its promise?
+        <p>
+          We dive into the next evolution of the web that claims to put the
+          power of the platforms back into the hands of the people. But is it
+          really fulfilling its promise?
+        </p>
 
-  Read more
+        <a href="/"> Read more</a>
+      </article>
 
-  New 
+      <section>
+        <h2 aria-label="New Articles">New</h2>
+        <ul>
+          <li>
+            <h3><a href="/"> Hydrogen VS Electric Cars</a></h3>
+            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </li>
+          <li>
+            <h3><a href="/"> The Downsides of AI Artistry</a></h3>
+            <p>
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+          </li>
+          <li>
+            <h3><a href="/"> Is VC Funding Drying Up?</a></h3>
+            <p>
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </li>
+        </ul>
+      </section>
 
-  Hydrogen VS Electric Cars
-  Will hydrogen-fueled cars ever catch up to EVs?
-
-  The Downsides of AI Artistry
-  What are the possible adverse effects of on-demand AI image generation?
-
-  Is VC Funding Drying Up?
-  Private funding by VC firms is down 50% YOY. We take a look at what that means.
-
-  01
-  Reviving Retro PCs
-  What happens when old PCs are given modern upgrades?
-
-  02
-  Top 10 Laptops of 2022
-  Our best picks for various needs and budgets.
-
-  03
-  The Growth of Gaming
-  How the pandemic has sparked fresh opportunities.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <section aria-label="More Articles">
+        <ul>
+          <li>
+            <img src="./images/image-retro-pcs.jpg" alt="" />
+            <p>01</p>
+            <p>Reviving Retro PCs</p>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </li>
+          <li>
+            <img src="./images/image-top-laptops.jpg" alt="" />
+            <p>02</p>
+            <p>Top 10 Laptops of 2022</p>
+            <p>Our best picks for various needs and budgets.</p>
+          </li>
+          <li>
+            <p>03</p>
+            <img src="./images/image-gaming-growth.jpg" alt="" />
+            <p>The Growth of Gaming</p>
+            <p>How the pandemic has sparked fresh opportunities.</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
 </html>
