@@ -4,6 +4,7 @@
 
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
+- Open/close navigation toggle
 - Navigate site with keyboard and screen readers
 
 <h2>Built with:</h2>
